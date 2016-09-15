@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <script src="lib/onsenui/js/onsenui.min.js"></script>
+
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        ons.ready(function() {
+            console.log("Onsen UI is ready!");
+        });
+    </script>
+</head>
+<body>
+    <ons-tabbar>
+      <ons-tab label="Tab 1" page="tab1.html" active>
+      </ons-tab>
+      <ons-tab label="Tab 2" page="tab2.html">
+      </ons-tab>
+    </ons-tabbar>
+
+    <ons-template id="tab1.html">
+      <ons-page>
+        <ons-toolbar>
+          <div class="center">Tab 1</div>
+        </ons-toolbar>
+
+        <p style="text-align: center;">
+          This is the first page.
+        </p>
+      </ons-page>
+    </ons-template>
+
+    <ons-template id="tab2.html">
+      <ons-page>
+        <ons-toolbar>
+          <div class="center">Tab 2</div>
+        </ons-toolbar>
+
+        <p style="text-align: center;">
+          This is the second page.
+        </p>
+      </ons-page>
+    </ons-template>
+</body>
+</html>
