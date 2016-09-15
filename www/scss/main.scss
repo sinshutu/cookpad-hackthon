@@ -7,33 +7,40 @@ $main-height: $item * 15;
 ons-toolbar {
   background-color: #F2BB20;
 }
+  .title {
+    background-color: red;
+    font-size: 65px;
+    color: white;
+    text-align: center;
+  }
 ons-carousel {
   height: $main-height;
   background-color: $main-color;
 }
-.tab {
-  height: 45px;
-  //position: fixed;
-  //top: 0px;
-  //width: 100%;
-
-  .btn {
-    height: 45px;
-    width: 50%;
-    float: left;
-    font-size: 18px;
-    background-color: white;
-    text-align: center;
-    span {
-      position: relative;
-      top: 15px;
-    }
-  }
-  .active {
-    border-bottom: 5px solid $main-color;
-  }
+//.tab {
+//  height: 45px;
+//  //position: fixed;
+//  //top: 0px;
+//  //width: 100%;
+//
+//  .btn {
+//    height: 45px;
+//    width: 50%;
+//    float: left;
+//    font-size: 18px;
+//    background-color: white;
+//    text-align: center;
+//    span {
+//      position: relative;
+//      top: 15px;
+//    }
+//  }
+//  .active {
+//    border-bottom: 5px solid $main-color;
+//  }
+//}
+ons-list-item {
 }
-
 /* other
 * {
   -webkit-touch-callout: none;

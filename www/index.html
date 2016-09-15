@@ -16,28 +16,19 @@
 ons.ready(function() {
   console.log("Onsen UI is ready!");
 });
-var next = function(){
-  var car = $("#car").get(0);
-  console.log(car);
-  car.next();
-}
-var prev = function(){
-  var car = $("#car").get(0);
-  console.log(car);
-  car.prev();
-}
     </script>
   </head>
   <body>
     <ons-page>
       <ons-toolbar style="background-color:#F2BB20;">
-        <div class="center">プロダクト</div>
+        <div class="center">朝パン生活</div>
       </ons-toolbar>
+
       <div class="tab">
-        <div class="btn active" onclick="next();">
+        <div class="btn active" onclick="prev();">
           <span>トースト</span>
         </div>
-        <div class="btn" onclick="prev();">
+        <div class="btn" onclick="next();">
           <span>サンドイッチ</span>
         </div>
       </div>
@@ -79,6 +70,6 @@ var prev = function(){
     </ons-carousel>
 
     </ons-page>
-    <script src="js/swip.js"></script>
+    <script src="js/tab.js"></script>
   </body>
 </html>
