@@ -11,11 +11,21 @@
     <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
     <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
     <link rel="stylesheet" href="css/style.css">
-
+    <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
     <script>
 ons.ready(function() {
   console.log("Onsen UI is ready!");
 });
+var next = function(){
+  var car = $("#car").get(0);
+  console.log(car);
+  car.next();
+}
+var prev = function(){
+  var car = $("#car").get(0);
+  console.log(car);
+  car.prev();
+}
     </script>
   </head>
   <body>
@@ -23,122 +33,88 @@ ons.ready(function() {
       <ons-toolbar>
         <div class="center">プロダクト</div>
       </ons-toolbar>
-      <ons-tabbar position="top">
+      <ons-carousel swipeable overscrollable auto-scroll id="car">
+        <ons-carousel-item style="background-color: gray;">
+          <div class="item-label">GRAY
+          <button onclick="next();">右</button>
+          </div>
+        </ons-carousel-item>
+        <ons-carousel-item style="background-color: #D38312;">
+          <div class="item-label">ORANGE
+          <button onclick="prev();">左</button>
+          </div>
+        </ons-carousel-item>
+        <ons-carousel-cover>
+          <div class="cover-label">Swipe left or right</div>
+        </ons-carousel-cover>
+      </ons-carousel>
+      <!--
+        <ons-tabbar position="top">
         <ons-tab label="トースト" page="tab1.html" active>
         </ons-tab>
         <ons-tab label="サンドイッチ" page="tab2.html">
         </ons-tab>
-      </ons-tabbar>
-      <ons-template id="tab1.html">
+        </ons-tabbar>
+        <ons-template id="tab1.html">
         <ons-page>
 
-          <ons-list>
-            <ons-list-item>
-              <h3>アボカドトースト</h3>
-              <img src="img/abokado.jpg">
-              <div>
-                aaaa
-              </div>
-            </ons-list-item>
-          </ons-list>
+        <ons-list>
+        <ons-list-item>
+        <h3>アボカドトースト</h3>
+        <img src="img/abokado.jpg">
+        <div>
+        aaaa
+        </div>
+        </ons-list-item>
+        <ons-list-item>
+        <h3>ガーリックマヨトースト</h3>
+        <img src="img/grericmayo.jpg">
+        </ons-list-item>
+        <ons-list-item>
+        <h3>カルボナーラ</h3>
+        <img src="img/karubonara.jpg">
+        </ons-list-item>
+        <ons-list-item>
+        <h3>サーモンマヨ</h3>
+        <img src="img/sarmonmayo.jpg">
+        </ons-list-item>
+        </ons-list>
 
-          <ons-list>
-            <ons-list-item>
-              <h3>アボカドトースト</h3>
-              <img src="img/abokado.jpg">
-            </ons-list-item>
-          </ons-list>
-
-          <ons-list>
-            <ons-list-item>
-              <h3>アボカドトースト</h3>
-              <img src="img/abokado.jpg">
-            </ons-list-item>
-          </ons-list>
-          <ons-list>
-            <ons-list-item>
-              <h3>アボカドトースト</h3>
-              <img src="img/abokado.jpg">
-            </ons-list-item>
-          </ons-list>
-          <ons-list>
-            <ons-list-item>
-              <h3>アボカドトースト</h3>
-              <img src="img/abokado.jpg">
-            </ons-list-item>
-          </ons-list>
-          <ons-list>
-            <ons-list-item>
-              <h3>アボカドトースト</h3>
-              <img src="img/abokado.jpg">
-            </ons-list-item>
-          </ons-list>
-          <ons-list>
-            <ons-list-item>
-              <h3>アボカドトースト</h3>
-              <img src="img/abokado.jpg">
-            </ons-list-item>
-          </ons-list>
-          <ons-list>
-            <ons-list-item>
-              <h3>アボカドトースト</h3>
-              <img src="img/abokado.jpg">
-            </ons-list-item>
-          </ons-list>
-          <ons-list>
-            <ons-list-item>
-              <h3>アボカドトースト</h3>
-              <img src="img/abokado.jpg">
-            </ons-list-item>
-          </ons-list>
-          <ons-list>
-            <ons-list-item>
-              <h3>アボカドトースト</h3>
-              <img src="img/abokado.jpg">
-            </ons-list-item>
-          </ons-list>
-          <ons-list>
-            <ons-list-item>
-              <h3>アボカドトースト</h3>
-              <img src="img/abokado.jpg">
-            </ons-list-item>
-          </ons-list>
-          <ons-list>
-            <ons-list-item>
-              <h3>アボカドトースト</h3>
-              <img src="img/abokado.jpg">
-            </ons-list-item>
-          </ons-list>
-          <ons-list>
-            <ons-list-item>
-              <h3>アボカドトースト</h3>
-              <img src="img/abokado.jpg">
-            </ons-list-item>
-          </ons-list>
-          <ons-list>
-            <ons-list-item>
-              <h3>アボカドトースト</h3>
-              <img src="img/abokado.jpg">
-            </ons-list-item>
-          </ons-list>
-          <ons-list>
-            <ons-list-item>
-              <h3>アボカドトースト</h3>
-              <img src="img/abokado.jpg">
-            </ons-list-item>
-          </ons-list>
+        </ons-list>
+      -->
         </ons-page>
-      </ons-template>
+    </ons-template>
 
-      <ons-template id="tab2.html">
-        <ons-page>
+    <ons-template id="tab2.html">
+      <ons-page>
 
-          <p style="text-align: center;">
-          This is the second page.
-          </p>
-        </ons-page>
-      </ons-template>
+        <ons-list>
+          <ons-list-item>
+            <h3>サーモンマヨ</h3>
+            <img src="img/sarmonmayo.jpg">
+          </ons-list-item>
+          <ons-list-item>
+            <h3>アボカドトースト</h3>
+            <img src="img/abokado.jpg">
+            <div>
+              aaaa
+            </div>
+          </ons-list-item>
+          <ons-list-item>
+            <h3>ガーリックマヨトースト</h3>
+            <img src="img/grericmayo.jpg">
+          </ons-list-item>
+          <ons-list-item>
+            <h3>カルボナーラ</h3>
+            <img src="img/karubonara.jpg">
+          </ons-list-item>
+        </ons-list>
+
+      </ons-list>
+    </ons-page>
+    </ons-template>
 
     </ons-page>
+    <script src="js/swip.js"></script>
   </body>
 </html>
