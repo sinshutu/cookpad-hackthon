@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
@@ -13,41 +13,60 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script>
-        ons.ready(function() {
-            console.log("Onsen UI is ready!");
-        });
+ons.ready(function() {
+  console.log("Onsen UI is ready!");
+});
     </script>
-</head>
-<body>
-    <ons-tabbar>
-      <ons-tab label="Tab 1" page="tab1.html" active>
-      </ons-tab>
-      <ons-tab label="Tab 2" page="tab2.html">
-      </ons-tab>
-    </ons-tabbar>
+  </head>
+  <body>
+    <ons-page>
+      <ons-toolbar>
+        <div class="center">プロダクト</div>
+      </ons-toolbar>
+      <ons-tabbar position="top">
+        <ons-tab label="トースト" page="tab1.html" active>
+        </ons-tab>
+        <ons-tab label="サンドイッチ" page="tab2.html">
+        </ons-tab>
+      </ons-tabbar>
+      <ons-template id="tab1.html">
+        <ons-page>
+          <ons-list>
+            <ons-list-item>Item</ons-list-item>
+            <ons-list-item>Item</ons-list-item>
+            <ons-list-item>Item</ons-list-item>
+            <ons-list-item>Item</ons-list-item>
+            <ons-list-item>Item</ons-list-item>
+            <ons-list-item>Item</ons-list-item>
+            <ons-list-item>Item</ons-list-item>
+            <ons-list-item>Item</ons-list-item>
+            <ons-list-item>Item</ons-list-item>
+            <ons-list-item>Item</ons-list-item>
+            <ons-list-item>Item</ons-list-item>
+            <ons-list-item>Item</ons-list-item>
+            <ons-list-item>Item</ons-list-item>
+            <ons-list-item>Item</ons-list-item>
+            <ons-list-item>Item</ons-list-item>
+            <ons-list-item>Item</ons-list-item>
+            <ons-list-item>Item</ons-list-item>
+            <ons-list-item>Item</ons-list-item>
+            <ons-list-item>Item</ons-list-item>
+            <ons-list-item>Item</ons-list-item>
+            <ons-list-item>Item</ons-list-item>
+            <ons-list-item>Item</ons-list-item>
+          </ons-list>
+        </ons-page>
+      </ons-template>
 
-    <ons-template id="tab1.html">
-      <ons-page>
-        <ons-toolbar>
-          <div class="center">Tab 1</div>
-        </ons-toolbar>
+      <ons-template id="tab2.html">
+        <ons-page>
 
-        <p style="text-align: center;">
-          This is the first page.
-        </p>
-      </ons-page>
-    </ons-template>
-
-    <ons-template id="tab2.html">
-      <ons-page>
-        <ons-toolbar>
-          <div class="center">Tab 2</div>
-        </ons-toolbar>
-
-        <p style="text-align: center;">
+          <p style="text-align: center;">
           This is the second page.
-        </p>
-      </ons-page>
-    </ons-template>
-</body>
+          </p>
+        </ons-page>
+      </ons-template>
+
+    </ons-page>
+  </body>
 </html>
