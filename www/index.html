@@ -16,12 +16,38 @@
 ons.ready(function() {
   console.log("Onsen UI is ready!");
 });
+jQuery.event.add(window, "load", function(){
+        var sl = 'img'; //リサイズしたい画像のクラス名
+        var fw = 375;        // サムネイルの幅
+        var fh = 243;        // サムネイルの高さ
+        var iw, ih;
+        $(sl).each(function(){
+            var w = $(this).width(); // 画像の幅(原寸)
+            var h = $(this).height(); // 画像の高さ(原寸)
+
+            //横長の画像の場合
+            if (w >= h) {
+                iw = (fh/h*w-fw)/2
+                $(this).height(fh); //高さをサムネイルに合わせる
+                $(this).css("top",0);
+                $(this).css("left","-"+iw+"px");//画像のセンター合わせ
+            }
+
+            //縦長の画像の場合
+            else {
+                ih = (fw/w*h-fh)/2
+                $(this).width(fw); //幅をサムネイルに合わせる
+                $(this).css("top","-"+ih+"px");//画像のセンター合わせ
+                $(this).css("left",0);
+            }
+        });
+    });
     </script>
   </head>
   <body>
     <ons-page>
       <ons-toolbar style="background-color:#F2BB20;">
-        <div class="center">朝パン生活</div>
+        <div class="title">朝パン生活</div>
       </ons-toolbar>
 
       <div class="tab">
@@ -33,26 +59,34 @@ ons.ready(function() {
         </div>
       </div>
       <ons-carousel swipeable overscrollable auto-scroll id="car">
-        <ons-carousel-item style="background-color: gray;">
+        <ons-carousel-item>
+<div class="card">
+  <img src="img/abokado.jpg" alt="Card image cap">
+  <div class="card-block">
+    <h4 class="title">カルボナーラトースト</h4>
+    <p class="foods">
+      食パン、卵、ベーコン、玉ねぎ、チーズ
+    </p>
+  </div>
+</div>
           <ons-list>
-            <ons-list-item>
-              <h3>アボカドトースト</h3>
+            <div class="card">
               <img src="img/abokado.jpg">
-              <div>
-                aaaa
+              <div style="display:block;" class="title">アボカドトースト</div>
+              <div class="foods">
               </div>
+            </div>
+            <ons-list-item>
+              <img src="img/grericmayo.jpg"><br>
+              <div class="title">ガーリックマヨトースト</div>
             </ons-list-item>
             <ons-list-item>
-              <h3>ガーリックマヨトースト</h3>
-              <img src="img/grericmayo.jpg">
-            </ons-list-item>
-            <ons-list-item>
-              <h3>カルボナーラ</h3>
               <img src="img/karubonara.jpg">
+              <div>カルボナーラ</div>
             </ons-list-item>
             <ons-list-item>
-              <h3>サーモンマヨ</h3>
               <img src="img/sarmonmayo.jpg">
+              <div>サーモンマヨ</div>
             </ons-list-item>
           </ons-list>
 
