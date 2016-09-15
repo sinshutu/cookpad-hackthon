@@ -21,7 +21,7 @@ ons.ready(function() {
   <body>
     <ons-page>
       <ons-toolbar style="background-color:#F2BB20;">
-        <div class="center">朝パン生活</div>
+        <div class="title">朝パン生活</div>
       </ons-toolbar>
 
       <div class="tab">
@@ -33,43 +33,26 @@ ons.ready(function() {
         </div>
       </div>
       <ons-carousel swipeable overscrollable auto-scroll id="car">
-        <ons-carousel-item style="background-color: gray;">
-          <ons-list>
-            <ons-list-item>
-              <h3>アボカドトースト</h3>
-              <img src="img/abokado.jpg">
-              <div>
-                aaaa
-              </div>
-            </ons-list-item>
-            <ons-list-item>
-              <h3>ガーリックマヨトースト</h3>
-              <img src="img/grericmayo.jpg">
-            </ons-list-item>
-            <ons-list-item>
-              <h3>カルボナーラ</h3>
-              <img src="img/karubonara.jpg">
-            </ons-list-item>
-            <ons-list-item>
-              <h3>サーモンマヨ</h3>
-              <img src="img/sarmonmayo.jpg">
-            </ons-list-item>
-          </ons-list>
+        <ons-carousel-item>
+          <div class="card">
+            <img src="img/abokado.jpg" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="title">カルボナーラトースト</h4>
+              <p class="foods">
+              食パン、卵、ベーコン、玉ねぎ、チーズ
+              </p>
+            </div>
+          </div>
 
-        </ons-list>
-
-      </ons-carousel-item>
-      <ons-carousel-item style="background-color: #D38312;">
-        <div class="item-label">ORANGE
-          <button onclick="prev();">左</button>
-        </div>
-      </ons-carousel-item>
-      <ons-carousel-cover>
-        <div class="cover-label"></div>
-      </ons-carousel-cover>
-    </ons-carousel>
-
+        </ons-carousel-item>
+        <ons-carousel-item style="background-color: #D38312;">
+          <div class="item-label">ORANGE
+            <button onclick="prev();">左</button>
+          </div>
+        </ons-carousel-item>
+      </ons-carousel>
     </ons-page>
     <script src="js/tab.js"></script>
+    <script src="js/list.js"></script>
   </body>
 </html>
