@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
     <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
     <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
     <script>
 ons.ready(function() {
@@ -30,89 +30,53 @@ var prev = function(){
   </head>
   <body>
     <ons-page>
-      <ons-toolbar>
+      <ons-toolbar style="background-color:#F2BB20;">
         <div class="center">プロダクト</div>
       </ons-toolbar>
+      <div class="tab">
+        <div class="btn active" onclick="next();">
+          <span>トースト</span>
+        </div>
+        <div class="btn" onclick="prev();">
+          <span>サンドイッチ</span>
+        </div>
+      </div>
       <ons-carousel swipeable overscrollable auto-scroll id="car">
         <ons-carousel-item style="background-color: gray;">
-          <div class="item-label">GRAY
-          <button onclick="next();">右</button>
-          </div>
-        </ons-carousel-item>
-        <ons-carousel-item style="background-color: #D38312;">
-          <div class="item-label">ORANGE
+          <ons-list>
+            <ons-list-item>
+              <h3>アボカドトースト</h3>
+              <img src="img/abokado.jpg">
+              <div>
+                aaaa
+              </div>
+            </ons-list-item>
+            <ons-list-item>
+              <h3>ガーリックマヨトースト</h3>
+              <img src="img/grericmayo.jpg">
+            </ons-list-item>
+            <ons-list-item>
+              <h3>カルボナーラ</h3>
+              <img src="img/karubonara.jpg">
+            </ons-list-item>
+            <ons-list-item>
+              <h3>サーモンマヨ</h3>
+              <img src="img/sarmonmayo.jpg">
+            </ons-list-item>
+          </ons-list>
+
+        </ons-list>
+
+      </ons-carousel-item>
+      <ons-carousel-item style="background-color: #D38312;">
+        <div class="item-label">ORANGE
           <button onclick="prev();">左</button>
-          </div>
-        </ons-carousel-item>
-        <ons-carousel-cover>
-          <div class="cover-label">Swipe left or right</div>
-        </ons-carousel-cover>
-      </ons-carousel>
-      <!--
-        <ons-tabbar position="top">
-        <ons-tab label="トースト" page="tab1.html" active>
-        </ons-tab>
-        <ons-tab label="サンドイッチ" page="tab2.html">
-        </ons-tab>
-        </ons-tabbar>
-        <ons-template id="tab1.html">
-        <ons-page>
-
-        <ons-list>
-        <ons-list-item>
-        <h3>アボカドトースト</h3>
-        <img src="img/abokado.jpg">
-        <div>
-        aaaa
         </div>
-        </ons-list-item>
-        <ons-list-item>
-        <h3>ガーリックマヨトースト</h3>
-        <img src="img/grericmayo.jpg">
-        </ons-list-item>
-        <ons-list-item>
-        <h3>カルボナーラ</h3>
-        <img src="img/karubonara.jpg">
-        </ons-list-item>
-        <ons-list-item>
-        <h3>サーモンマヨ</h3>
-        <img src="img/sarmonmayo.jpg">
-        </ons-list-item>
-        </ons-list>
-
-        </ons-list>
-      -->
-        </ons-page>
-    </ons-template>
-
-    <ons-template id="tab2.html">
-      <ons-page>
-
-        <ons-list>
-          <ons-list-item>
-            <h3>サーモンマヨ</h3>
-            <img src="img/sarmonmayo.jpg">
-          </ons-list-item>
-          <ons-list-item>
-            <h3>アボカドトースト</h3>
-            <img src="img/abokado.jpg">
-            <div>
-              aaaa
-            </div>
-          </ons-list-item>
-          <ons-list-item>
-            <h3>ガーリックマヨトースト</h3>
-            <img src="img/grericmayo.jpg">
-          </ons-list-item>
-          <ons-list-item>
-            <h3>カルボナーラ</h3>
-            <img src="img/karubonara.jpg">
-          </ons-list-item>
-        </ons-list>
-
-      </ons-list>
-    </ons-page>
-    </ons-template>
+      </ons-carousel-item>
+      <ons-carousel-cover>
+        <div class="cover-label"></div>
+      </ons-carousel-cover>
+    </ons-carousel>
 
     </ons-page>
     <script src="js/swip.js"></script>
