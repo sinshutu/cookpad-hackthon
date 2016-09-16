@@ -3,8 +3,7 @@
 
 /* default */
 $img_height: 243px;
-$item_footer: 59;
-$item: $img_height + $item_footer + 57;
+$item: $img_height + 33 + 60;
 $main-height: $item * 15;
 ons-toolbar {
     text-align: center;
@@ -42,6 +41,7 @@ ons-carousel {
     background-color: white;
     margin-bottom: 20px;
     img {
+        margin-bottom: 0px;
         height: 243px;
         width: 100%;
         overflow: hidden;
@@ -53,10 +53,14 @@ ons-carousel {
         .title {
             font-size: 18px;
             color: $main-color;
+            margin-top: 10px;
+            margin-bottom: 0px;
             display: block;
         }
         .foods {
             font-size: 13px;
+            margin-top: 0px;
+            margin-bottom: 7px;
         }
     }
 }
