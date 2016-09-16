@@ -98,5 +98,5 @@
     <icon src="/platforms/chrome/icon.png" width="128" height="128"/>
   </platform>
   <preference name="WindowsStorePublisherName" value="My Name"/>
-  <preference name="WindowsStoreIdentityName" value="8fa9523f-ddab-1f10-36ed-930fd9f95c82"/>
+  <preference name="WindowsStoreIdentityName" value="ad3b09ce-b5bc-9f1b-9e7d-d604a2c0204d"/>
 </widget>
