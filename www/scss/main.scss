@@ -2,7 +2,9 @@
 @import "color";
 
 /* default */
-$item: 300px;
+$img_height: 243px;
+$item_footer: 59;
+$item: $img_height + $item_footer + 57;
 $main-height: $item * 15;
 ons-toolbar {
     text-align: center;
@@ -58,11 +60,3 @@ ons-carousel {
         }
     }
 }
-/* other
- * {
- -webkit-touch-callout: none;
- }
- *:not(input){
- -webkit-user-select: none;
- }
- */
