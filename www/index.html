@@ -16,6 +16,32 @@
 ons.ready(function() {
   console.log("Onsen UI is ready!");
 });
+jQuery.event.add(window, "load", function(){
+        var sl = 'img'; //リサイズしたい画像のクラス名
+        var fw = 375;        // サムネイルの幅
+        var fh = 243;        // サムネイルの高さ
+        var iw, ih;
+        $(sl).each(function(){
+            var w = $(this).width(); // 画像の幅(原寸)
+            var h = $(this).height(); // 画像の高さ(原寸)
+
+            //横長の画像の場合
+            if (w >= h) {
+                iw = (fh/h*w-fw)/2
+                $(this).height(fh); //高さをサムネイルに合わせる
+                $(this).css("top",0);
+                $(this).css("left","-"+iw+"px");//画像のセンター合わせ
+            }
+
+            //縦長の画像の場合
+            else {
+                ih = (fw/w*h-fh)/2
+                $(this).width(fw); //幅をサムネイルに合わせる
+                $(this).css("top","-"+ih+"px");//画像のセンター合わせ
+                $(this).css("left",0);
+            }
+        });
+    });
     </script>
   </head>
   <body>
