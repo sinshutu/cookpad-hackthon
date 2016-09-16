@@ -5,8 +5,8 @@ $(document).ready(function(){
         foods: "食パン、卵、ベーコン、玉ねぎ、チーズ",
     },{
         img_path: "abokado.jpg",
-        title: "モモ挽肉とひよこ豆のトースト",
-        foods: "鶏挽肉、トマトベース、パセリ、ひよこ豆",
+        title: "モモ挽肉と大豆のトースト",
+        foods: "鶏挽肉、トマトベース、パセリ、大豆",
     },{
         img_path: "",
         title: "カレーチーズトースト",
@@ -69,7 +69,7 @@ $(document).ready(function(){
     },{
         img_path: "",
         title: "たまごとアスパラのサンドイッチ",
-        foods: "卵、アスパラ、マヨネーズ、マーガリン、サラダ油、塩胡椒",
+        foods: "卵、アスパラ、マヨネーズ、マーガリン、サラダ油",
     },{
         img_path: "",
         title: "ポケットサンド",
@@ -77,7 +77,7 @@ $(document).ready(function(){
     },{
         img_path: "",
         title: "はちみつナッツバタートースト",
-        foods: "スモークサーモン、キュウリ、サラダ菜、玉ねぎ、マヨネーズ",
+        foods: "サーモン、キュウリ、サラダ菜、玉ねぎ、マヨネーズ",
     },{
         img_path: "",
         title: "CULBサンドイッチ",
@@ -117,13 +117,14 @@ $(document).ready(function(){
     },{
         img_path: "",
         title: "エビとアボカドのオープンサンド",
-        foods: "エビ、アボカド、トマト、ゆで卵、バター、塩胡椒、レモン汁",
+        foods: "エビ、アボカド、トマト、卵、バター、塩胡椒、レモン汁",
     },{
         img_path: "",
         title: "チョコバナナサンド",
         foods: "板チョコ、バター、バナナ",
     }]
     gen_list(data, "sand");
+
 });
 
 var gen_list = function(data, target){

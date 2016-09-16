@@ -3,8 +3,8 @@
 
 /* default */
 $img_height: 243px;
-$item: $img_height + 33 + 60;
-$main-height: $item * 15;
+$item: $img_height + 33 + 57;
+$main-height: $item * 15 - 4;
 ons-toolbar {
     text-align: center;
     .title {
